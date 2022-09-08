@@ -1,0 +1,85 @@
+$bg: #000000;
+$bg-card: #0e1218;
+$text: #f1f1f1;
+$img-profile: #8257e5;
+$buttons: #fff;
+$border-button: #1a1a1a;
+
+@mixin alt {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  max-width: 27.375rem;
+  height: 33.3125rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  &__alt {
+    @include alt;
+    background-color: #8257e5;
+  }
+
+  background-color: #000000;
+  @include alt;
+
+  &__content {
+    width: 20rem;
+    background-color: $bg-card;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 1rem;
+    h1 {
+      font-size: 24px;
+      margin-left: 6rem;
+    }
+    img {
+      margin-top: 8%;
+      margin-left: 20%;
+      width: 20rem;
+      left: 13px;
+      top: 30px;
+
+      background: url(22185823.png);
+      border: 10px solid #8257e5;
+      border-radius: 300px;
+    }
+
+    &__data {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-family: "Prompt";
+      font-style: normal;
+      font-weight: 400;
+      width: 8rem;
+      height: 8rem;
+
+      position: absolute;
+
+      top: 55%;
+      background-color: rba(10, 23, 55, 0.8);
+      background: linear-gradient(
+        180deg,
+        #000000 3.65%,
+        rgba(70, 69, 69, 0.72) 53.65%,
+        rgba(62, 56, 56, 0.42) 100%
+      );
+      border-radius: 50px;
+      color: #ffffff;
+      ul {
+        padding: 0;
+        width: 100%;
+        z-index: 10000;
+        list-style-type: none;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
